@@ -12,3 +12,7 @@ Module 4. While loops (while) (Completed tasks 1-6) 100% Done
 Module 5. List structures and ireative loops (for) (Completed tasks 1-4) 100% Done
 
 Module 6. Functions (Completed tasks 1-6) 100% Done
+
+Module 7. Tuple, set and dictionary (Completed tasks 1-3) 100% Done
+
+Module 8. Using relational databases (Completed tasks 1-3) 100% Done
