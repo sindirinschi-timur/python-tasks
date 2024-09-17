@@ -2,15 +2,15 @@ import mysql.connector
 from mysql.connector import connection
 
 
-def get_airport_data(icao_code):
-    sql = f"SELECT name, municipality FROM airports WHERE ident = '{icao_code}'"
+def get_airport_data(area_code):
+    sql = f"SELECT name, type FROM airports WHERE iso_country = '{area_code}' ORDER BY type"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
     if cursor.rowcount > 0:
         for row in result:
-            print(f"Airport {row[0]} is in town {row[1]} with ICAO code {icao_code}")
+            print(f"{row[0]} is of the type {row[1]}.")
 
 
 connection = mysql.connector.connect(
@@ -24,6 +24,5 @@ connection = mysql.connector.connect(
         collation="utf8mb4_general_ci"
     )
 
-icao_code = input("Enter ICAO code: ")
-get_airport_data(icao_code)
-
+area_code = input("Enter the country area code: ")
+get_airport_data(area_code)

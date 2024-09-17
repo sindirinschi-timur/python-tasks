@@ -1,16 +1,20 @@
 import mysql.connector
 from mysql.connector import connection
+import geopy
+from geopy import distance
 
 
 def get_airport_data(icao_code):
-    sql = f"SELECT name, municipality FROM airports WHERE ident = '{icao_code}'"
+    sql = f"SELECT longitude_deg, latitude_deg FROM airports WHERE ident = '{icao_code}'"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
     if cursor.rowcount > 0:
         for row in result:
-            print(f"Airport {row[0]} is in town {row[1]} with ICAO code {icao_code}")
+            coords = (row[0], row[1])
+
+    return coords
 
 
 connection = mysql.connector.connect(
@@ -24,6 +28,11 @@ connection = mysql.connector.connect(
         collation="utf8mb4_general_ci"
     )
 
-icao_code = input("Enter ICAO code: ")
-get_airport_data(icao_code)
+icao_code = input("Enter First ICAO code: ")
+coords1 = get_airport_data(icao_code)
+icao_code = input("Enter Second ICAO code: ")
+coords2 = get_airport_data(icao_code)
 
+distance = (geopy.distance.geodesic(coords1, coords2).km)
+
+print(f"The distance between the airports is {distance.__round__()} kilometers.")
