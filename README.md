@@ -16,3 +16,7 @@ Module 6. Functions (Completed tasks 1-6) 100% Done
 Module 7. Tuple, set and dictionary (Completed tasks 1-3) 100% Done
 
 Module 8. Using relational databases (Completed tasks 1-3) 100% Done
+
+Module 9. Fundamentals of object-oriented programming (Completed tasks 1-4) 100% Done
+
+Module 10. Association (Completed tasks 1-4) 100% Done
