@@ -10,4 +10,3 @@ print(f"current speed {new_car.current_speed} km/h")
 
 new_car.accelerate(-200)
 print(f"final speed {new_car.current_speed} km/h")
-

@@ -5,5 +5,7 @@ def main():
 
     building1.run_elevator(3, 9)
 
+    building1.fire_alarm()
+
 if __name__ == '__main__':
     main()
