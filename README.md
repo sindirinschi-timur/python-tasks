@@ -20,3 +20,9 @@ Module 8. Using relational databases (Completed tasks 1-3) 100% Done
 Module 9. Fundamentals of object-oriented programming (Completed tasks 1-4) 100% Done
 
 Module 10. Association (Completed tasks 1-4) 100% Done
+
+Module 11. Inheritance (Completed tasks 1-2) 100% Done
+
+Module 12. Using external intefaces (Completed tasks 1-2) 100% Done
+
+Module 13. Setting up a backend service with an inteface (Completed tasks 1-2) 100% Done
