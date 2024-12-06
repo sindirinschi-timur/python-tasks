@@ -5,7 +5,7 @@ from geopy import distance
 
 
 def get_airport_data(icao_code):
-    sql = f"SELECT longitude_deg, latitude_deg FROM airports WHERE ident = '{icao_code}'"
+    sql = f"SELECT longitude_deg, latitude_deg FROM airport WHERE ident = '{icao_code}'"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
@@ -20,9 +20,9 @@ def get_airport_data(icao_code):
 connection = mysql.connector.connect(
         host='localhost',
         port=3306,
-        database='airport_db',
-        user='dbuser',
-        password='password',
+        database='course_db',
+        user='user',
+        password='pass',
         autocommit=True,
         charset="utf8mb4",
         collation="utf8mb4_general_ci"
